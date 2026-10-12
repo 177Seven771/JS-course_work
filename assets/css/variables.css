@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap&family=Inter:wght@600&display=swap');
+
+:root {
+  --primary-blue: #377DFF;
+  --white: #FFF;
+  --bg-dark: #171D28;
+  --dark: #000;
+  --dark-grey: #141718;
+  --grey: #6C7275;
+  --green: #38CB89;
+  --light-gray: #F3F5F7;
+  --grayish-blue: #CBCDCE;
+  --font-family: "Inter";
+  --font-poppins: "Poppins";
+  --font-space: "Space Grotesk";
+}

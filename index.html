@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3legant</title>
+  <script src="assets/js/script.js" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="notification-bar">
+    <div class="notification-content">
+      
+      <div class="text-icon-group">
+        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.7681 12.5856L19.5227 13.2944H19.5227L19.7681 12.5856ZM19.7681 6.91437L20.0135 7.6231V7.6231L19.7681 6.91437ZM1.73189 12.5856L1.97727 13.2944H1.97727L1.73189 12.5856ZM1.73189 6.91437L1.48652 7.6231L1.48652 7.6231L1.73189 6.91437ZM14.2803 7.28033C14.5732 6.98744 14.5732 6.51256 14.2803 6.21967C13.9874 5.92678 13.5126 5.92678 13.2197 6.21967L14.2803 7.28033ZM7.21967 12.2197C6.92678 12.5126 6.92678 12.9874 7.21967 13.2803C7.51256 13.5732 7.98744 13.5732 8.28033 13.2803L7.21967 12.2197ZM4.75 18C2.95507 18 1.5 16.5449 1.5 14.75H0C0 17.3734 2.12665 19.5 4.75 19.5V18ZM20 14.75C20 16.5449 18.5449 18 16.75 18V19.5C19.3734 19.5 21.5 17.3734 21.5 14.75H20ZM16.75 1.5C18.5449 1.5 20 2.95507 20 4.75H21.5C21.5 2.12665 19.3734 0 16.75 0V1.5ZM4.75 0C2.12665 0 0 2.12665 0 4.75H1.5C1.5 2.95507 2.95507 1.5 4.75 1.5V0ZM20.0135 11.8769C19.1315 11.5716 18.5 10.7336 18.5 9.75H17C17 11.3924 18.0554 12.7863 19.5227 13.2944L20.0135 11.8769ZM18.5 9.75C18.5 8.76644 19.1315 7.92844 20.0135 7.6231L19.5227 6.20565C18.0554 6.71367 17 8.10761 17 9.75H18.5ZM3 9.75C3 10.7336 2.36845 11.5716 1.48652 11.8769L1.97727 13.2944C3.44461 12.7863 4.5 11.3924 4.5 9.75H3ZM1.48652 7.6231C2.36845 7.92844 3 8.76644 3 9.75H4.5C4.5 8.10762 3.44462 6.71367 1.97727 6.20565L1.48652 7.6231ZM21.5 5.75V4.75H20V5.75H21.5ZM20 13.75V14.75H21.5V13.75H20ZM0 13.75V14.75H1.5V13.75H0ZM1.5 5.75V4.75H0V5.75H1.5ZM16.75 18H4.75V19.5H16.75V18ZM16.75 0H4.75V1.5H16.75V0ZM1.48652 11.8769C0.807846 12.1119 0 12.7475 0 13.75H1.5C1.5 13.6941 1.52081 13.6208 1.60172 13.5313C1.6866 13.4373 1.81974 13.3489 1.97727 13.2944L1.48652 11.8769ZM20.0135 7.6231C20.6922 7.38813 21.5 6.75246 21.5 5.75H20C20 5.80587 19.9792 5.87917 19.8983 5.96871C19.8134 6.06265 19.6803 6.15111 19.5227 6.20565L20.0135 7.6231ZM1.97727 6.20565C1.81974 6.15111 1.6866 6.06265 1.60172 5.96871C1.52081 5.87917 1.5 5.80587 1.5 5.75H0C0 6.75246 0.807846 7.38813 1.48652 7.6231L1.97727 6.20565ZM19.5227 13.2944C19.6803 13.3489 19.8134 13.4373 19.8983 13.5313C19.9792 13.6208 20 13.6941 20 13.75H21.5C21.5 12.7475 20.6922 12.1119 20.0135 11.8769L19.5227 13.2944ZM8 6.75C8 6.88807 7.88807 7 7.75 7V8.5C8.7165 8.5 9.5 7.7165 9.5 6.75H8ZM7.75 7C7.61193 7 7.5 6.88807 7.5 6.75H6C6 7.7165 6.7835 8.5 7.75 8.5V7ZM7.5 6.75C7.5 6.61193 7.61193 6.5 7.75 6.5V5C6.7835 5 6 5.7835 6 6.75H7.5ZM7.75 6.5C7.88807 6.5 8 6.61193 8 6.75H9.5C9.5 5.7835 8.7165 5 7.75 5V6.5ZM14 12.75C14 12.8881 13.8881 13 13.75 13V14.5C14.7165 14.5 15.5 13.7165 15.5 12.75H14ZM13.75 13C13.6119 13 13.5 12.8881 13.5 12.75H12C12 13.7165 12.7835 14.5 13.75 14.5V13ZM13.5 12.75C13.5 12.6119 13.6119 12.5 13.75 12.5V11C12.7835 11 12 11.7835 12 12.75H13.5ZM13.75 12.5C13.8881 12.5 14 12.6119 14 12.75H15.5C15.5 11.7835 14.7165 11 13.75 11V12.5ZM13.2197 6.21967L7.21967 12.2197L8.28033 13.2803L14.2803 7.28033L13.2197 6.21967Z" fill="#FEFEFE"/>
+        </svg>
+        <span class="promo-text">Знижка 30% на все — обмежений час!</span>
+      </div>
+      
+      <a href="#" class="shop-now-btn">
+        Купити зараз
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.33331 8H12.6666M12.6666 8L8.66665 4M12.6666 8L8.66665 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      
+    </div>
+    
+    <button class="close-btn" aria-label="Закрити сповіщення">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <header class="main-header">
+    <div class="header-container">
+      <button class="burger-menu" aria-label="Відкрити меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="#" class="logo">3legant.</a>
+
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link active">Головна</a>
+        <a href="#shop" class="nav-link dropdown">Каталог</a>
+        <a href="#articles" class="nav-link dropdown">Товари</a>
+        <a href="#footer" class="nav-link">Контакти</a>
+      </nav>
+
+      <div class="header-icons">
+        <button class="icon-btn search-btn" aria-label="Пошук">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.25 17.25L20.75 20.75M19.75 10.25C19.75 5.00329 15.4967 0.75 10.25 0.75C5.00329 0.75 0.75 5.00329 0.75 10.25C0.75 15.4967 5.00329 19.75 10.25 19.75C15.4967 19.75 19.75 15.4967 19.75 10.25Z" stroke="#141718" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn profile-btn" aria-label="Профіль">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.3088 18.2988C16.3154 15.6418 13.7536 13.75 10.75 13.75C7.74638 13.75 5.1846 15.6418 4.19117 18.2988M4.19117 18.2988C5.94694 19.8256 8.24052 20.75 10.75 20.75C13.2595 20.75 15.5531 19.8256 17.3088 18.2988C19.4172 16.4654 20.75 13.7634 20.75 10.75C20.75 5.22715 16.2728 0.75 10.75 0.75C5.22715 0.75 0.75 5.22715 0.75 10.75C0.75 13.7634 2.08285 16.4654 4.19117 18.2988ZM13.75 7.75C13.75 9.40685 12.4069 10.75 10.75 10.75C9.09315 10.75 7.75 9.40685 7.75 7.75C7.75 6.09315 9.09315 4.75 10.75 4.75C12.4069 4.75 13.75 6.09315 13.75 7.75Z" stroke="#141718" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="cart-wrapper">
+          <a href="#" class="cart-link" aria-label="Кошик">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.6408 0.75H6.41784C4.46248 0.75 2.79372 2.16365 2.47226 4.0924L0.805597 14.0924C0.399243 16.5305 2.27942 18.75 4.75117 18.75H15.3075C17.7792 18.75 19.6594 16.5305 19.2531 14.0924L17.5864 4.0924C17.2649 2.16365 15.5962 0.75 13.6408 0.75Z" stroke="#141718" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M7.25 5.5L7.25 6.5C7.25 8.15685 8.59315 9.5 10.25 9.5C11.9069 9.5 13.25 8.15685 13.25 6.5V5.5" stroke="#141718" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="cart-badge">2</div>
+        </div>
+      </div>
+    </div> 
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-image-box">
+      <img src="assets/images/header-man-in-jacket.png" alt="Чоловік у зимовій куртці" class="hero-img">
+    </div>
+    <div class="hero-content-box">
+      <div class="hero-text-container">
+        <h1 class="hero-title">Даруйте<br>тепло.</h1>
+        <p class="hero-description">Кожному потрібна якісна зимова куртка. Знайдіть свою в нашій колекції та відкрийте більше.</p>
+        <a href="#" class="hero-btn">До покупок</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="brands-section">
+    <h2 class="section-title-small">Популярні бренди</h2>
+    <div class="brands-container">
+      <div class="brands-grid">
+        <div class="brand-item"><img src="assets/images/logo01.jpg" alt="Логотип 1"></div>
+        <div class="brand-item"><img src="assets/images/logo04.jpg" alt="Логотип 2"></div>
+        <div class="brand-item"><img src="assets/images/logo05.jpg" alt="Логотип 3"></div>
+        <div class="brand-item"><img src="assets/images/logo02.jpg" alt="Логотип 4"></div>
+        <div class="brand-item"><img src="assets/images/logo03.jpg" alt="Логотип 5"></div>
+        <div class="brand-item"><img src="assets/images/logo6.jpg"  alt="Логотип 6"></div>
+      </div>
+      <div class="brands-arrows">
+        <button class="arrow-btn" aria-label="Попередній бренд"></button>
+        <button class="arrow-btn" aria-label="Наступний бренд"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-section">
+    <div class="products-header">
+      <h2 class="section-title">Новинки</h2>
+      <div class="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+    
+    <div class="products-slider">
+      <div class="product-card">
+        <div class="product-image-box">
+          <span class="badge-new">НОВИНКА</span>
+          <button class="wishlist-btn" aria-label="Додати до списку бажань">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+          <img src="assets/images/placeholder.jpg" alt="Пуховик 96 Nuptse Dip Dye Korea" class="product-img">
+          <button class="add-to-cart-btn">У кошик</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">★★★★★</div>
+          <h3 class="product-name">Пуховик 96 Nuptse Dip Dye Korea</h3>
+          <span class="product-price">$400.00</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-box">
+          <span class="badge-new">НОВИНКА</span>
+          <img src="assets/images/placeholder-1.jpg" alt="Куртка Paradigm Chilliwack Black Label" class="product-img">
+          <button class="add-to-cart-btn">У кошик</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">★★★★★</div>
+          <h3 class="product-name">Куртка Paradigm Chilliwack Black Label</h3>
+          <span class="product-price">$349.99</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-box">
+          <span class="badge-new">НОВИНКА</span>
+          <img src="assets/images/placeholder-2.jpg" alt="Куртка 1996 Retro Nuptse чорна" class="product-img">
+          <button class="add-to-cart-btn">У кошик</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">★★★★★</div>
+          <h3 class="product-name">Куртка 1996 Retro Nuptse (чорна)</h3>
+          <span class="product-price">$149.99</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-box">
+          <span class="badge-new">НОВИНКА</span>
+          <img src="assets/images/placeholder-3.jpg" alt="Стьобаний бомбер Paul" class="product-img">
+          <button class="add-to-cart-btn">У кошик</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">★★★★★</div>
+          <h3 class="product-name">Стьобаний нейлоновий бомбер Paul</h3>
+          <span class="product-price">$300.00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories-section">
+    <h2 class="categories-main-title">Категорії товарів</h2>
+    <div class="categories-grid">
+      <div class="category-item">
+        <div class="category-img-box"><img src="assets/images/puffers.jpg" alt="Пуховики"></div>
+        <span class="category-name">Пуховики</span>
+      </div>
+      <div class="category-item">
+        <div class="category-img-box"><img src="assets/images/bombers.jpg" alt="Бомбери"></div>
+        <span class="category-name">Бомбери</span>
+      </div>
+      <div class="category-item">
+        <div class="category-img-box"><img src="assets/images/lightweigt-jackets.jpg" alt="Легкі куртки"></div>
+        <span class="category-name">Легкі куртки</span>
+      </div>
+      <div class="category-item">
+        <div class="category-img-box"><img src="assets/images/gilets.jpg" alt="Жилети"></div>
+        <span class="category-name">Жилети</span>
+      </div>
+      <div class="category-item">
+        <div class="category-img-box"><img src="assets/images/coats.jpg" alt="Пальта"></div>
+        <span class="category-name">Пальта</span>
+      </div>
+      <div class="category-item">
+        <div class="category-img-box"><img src="assets/images/rainwear.jpg" alt="Дощовики"></div>
+        <span class="category-name">Дощовики</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="collections-section">
+    <div class="collections-grid">
+      
+      <div class="collection-card">
+        <img src="assets/images/november-outfits.jpg" alt="Листопадові образи" class="collection-img">
+        <div class="collection-content">
+          <h2 class="collection-title">Листопадові образи</h2>
+          <a href="#" class="collection-link">
+            Колекція
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3.33331 8H12.6666M12.6666 8L8.66665 4M12.6666 8L8.66665 12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="collection-card">
+        <img src="assets/images/cashmere-set.jpg" alt="Кашеміровий сет" class="collection-img">
+        <div class="collection-content">
+          <h2 class="collection-title">Кашеміровий сет</h2>
+          <a href="#" class="collection-link">
+            Колекція
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3.33331 8H12.6666M12.6666 8L8.66665 4M12.6666 8L8.66665 12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="collection-card">
+        <img src="assets/images/new-nordic.jpg" alt="Новий скандинавський стиль" class="collection-img">
+        <div class="collection-content">
+          <h2 class="collection-title">Новий скандинавський</h2>
+          <a href="#" class="collection-link">
+            Колекція
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3.33331 8H12.6666M12.6666 8L8.66665 4M12.6666 8L8.66665 12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="collection-card">
+        <img src="assets/images/leather.jpg" alt="Шкіряна колекція" class="collection-img">
+        <div class="collection-content">
+          <h2 class="collection-title">Шкіряна лінія</h2>
+          <a href="#" class="collection-link">
+            Колекція
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3.33331 8H12.6666M12.6666 8L8.66665 4M12.6666 8L8.66665 12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="shop" class="bestseller-section">
+    <h2 class="bestseller-main-title">Хіти продажу</h2>
+    <div class="bestseller-grid">
+      
+      <div class="product-card">
+        <div class="product-image-box">
+          <span class="badge-hot">ТОП</span>
+          <span class="badge-sale">-50%</span>
+          <img src="assets/images/best-seller1.jpg" alt="Шкіряна куртка Freestyle Crew Racer" class="product-img">
+          <button class="add-to-cart-btn">У кошик</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">★★★★★</div>
+          <h3 class="product-name">Шкіряна куртка Freestyle Crew Racer</h3>
+          <div class="price-wrapper">
+            <span class="product-price">$595.00</span>
+            <span class="product-old-price">$1000.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-box">
+          <span class="badge-hot">ТОП</span>
+          <img src="assets/images/best-seller2.jpg" alt="Кашемірова куртка 1996 Retro Nuptse сіра" class="product-img">
+          <button class="add-to-cart-btn">У кошик</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">★★★★★</div>
+          <h3 class="product-name">Кашемірова куртка 1996 Retro Nuptse (сіра)</h3>
+          <div class="price-wrapper">
+            <span class="product-price">$149.99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-box">
+          <span class="badge-hot">ТОП</span>
+          <img src="assets/images/best-seller3.jpg" alt="Чорний бомбер Chilliwack HUMANATURE" class="product-img">
+          <button class="add-to-cart-btn">У кошик</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">★★★★★</div>
+          <h3 class="product-name">Чорний бомбер Chilliwack HUMANATURE</h3>
+          <div class="price-wrapper">
+            <span class="product-price">$1195.99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-box">
+          <span class="badge-hot">ТОП</span>
+          <img src="assets/images/best-seller4.jpg" alt="Бомбер 96 Nuptse Dip Dye" class="product-img">
+          <button class="add-to-cart-btn">У кошик</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">★★★★★</div>
+          <h3 class="product-name">Бомбер 96 Nuptse Dip Dye</h3>
+          <div class="price-wrapper">
+            <span class="product-price">$400.99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-box">
+          <span class="badge-hot">ТОП</span>
+          <img src="assets/images/best-seller5.jpg" alt="Оверсайз куртка харрінгтон із натуральної шкіри" class="product-img">
+          <button class="add-to-cart-btn">У кошик</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">★★★★★</div>
+          <h3 class="product-name">Оверсайз куртка харрінгтон зі шкіри (чорна)</h3>
+          <div class="price-wrapper">
+            <span class="product-price">$249.99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-box">
+          <span class="badge-hot">ТОП</span>
+          <img src="assets/images/best-seller6.jpg" alt="Чоловічий стьобаний бомбер з капюшоном" class="product-img">
+          <button class="add-to-cart-btn">У кошик</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">★★★★★</div>
+          <h3 class="product-name">Чоловічий стьобаний бомбер з капюшоном</h3>
+          <div class="price-wrapper">
+            <span class="product-price">$199.95</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-box">
+          <span class="badge-hot">ТОП</span>
+          <img src="assets/images/best-seller7.jpg" alt="Пальто Paradigm Chilliwack Black Label" class="product-img">
+          <button class="add-to-cart-btn">У кошик</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">★★★★★</div>
+          <h3 class="product-name">Пальто Paradigm Chilliwack Black Label</h3>
+          <div class="price-wrapper">
+            <span class="product-price">$1495.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-box">
+          <span class="badge-hot">ТОП</span>
+          <img src="assets/images/best-seller8.jpg" alt="Чоловіча куртка-дощовик Torrentshell 3L" class="product-img">
+          <button class="add-to-cart-btn">У кошик</button>
+        </div>
+        <div class="product-info">
+          <div class="stars">★★★★★</div>
+          <h3 class="product-name">Чоловічий дощовик Torrentshell 3L (коричневий)</h3>
+          <div class="price-wrapper">
+            <span class="product-price">$149.00</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="promo-banner-section">
+    <div class="promo-banner-container">
+      
+      <div class="promo-banner-image-box">
+        <img src="assets/images/promo-banner.jpg" alt="Зимовий розпродаж" class="promo-banner-img">
+      </div>
+      
+      <div class="promo-banner-content-box">
+        <div class="promo-banner-text-container">
+          <span class="promo-banner-badge">ЗНИЖКИ ДО 35%</span>
+          <h2 class="promo-banner-title">СОТНІ товарів<br>за новими цінами!</h2>
+          <p class="promo-banner-description">Поспішайте! Зима близько!</p>
+          <a href="#" class="promo-banner-link">
+            Купити зараз
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3.33331 8H12.6666M12.6666 8L8.66665 4M12.6666 8L8.66665 12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="video-promo-section">
+    <div class="video-promo-header">
+      <span class="video-promo-badge">АКЦІЯ</span>
+      <h2 class="video-promo-title">Зимові колекції</h2>
+      <p class="video-promo-subtitle">Представляємо нову лінійку зимових курток.</p>
+    </div>
+    
+    <div class="video-promo-container">
+      <img src="assets/images/video.jpg" alt="Відео зимової колекції" class="video-promo-img">
+    </div>
+  </section>
+
+  <section id="articles" class="articles-section">
+    <div class="articles-header">
+      <h2 class="articles-main-title">Останні статті</h2>
+      <a href="#" class="view-more-link">
+        Дивитися більше
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3.33331 8H12.6666M12.6666 8L8.66665 4M12.6666 8L8.66665 12" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="articles-grid">
+      <article class="article-card">
+        <div class="article-image-box">
+          <img src="assets/images/article1.jpg" alt="Гід святкових подарунків 2023" class="article-img">
+        </div>
+        <div class="article-info">
+          <h3 class="article-title">Гід святкових подарунків 2023</h3>
+          <a href="#" class="article-link">
+            Читати далі
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3.33331 8H12.6666M12.6666 8L8.66665 4M12.6666 8L8.66665 12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-image-box">
+          <img src="assets/images/article2.jpg" alt="Гід святкових подарунків 2023" class="article-img">
+        </div>
+        <div class="article-info">
+          <h3 class="article-title">Гід святкових подарунків 2023</h3>
+          <a href="#" class="article-link">
+            Читати далі
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3.33331 8H12.6666M12.6666 8L8.66665 4M12.6666 8L8.66665 12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-image-box">
+          <img src="assets/images/article3.jpg" alt="Гід святкових подарунків 2023" class="article-img">
+        </div>
+        <div class="article-info">
+          <h3 class="article-title">Гід святкових подарунків 2023</h3>
+          <a href="#" class="article-link">
+            Читати далі
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3.33331 8H12.6666M12.6666 8L8.66665 4M12.6666 8L8.66665 12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="instagram-features-section">
+    <div class="instagram-container">
+      <div class="instagram-header">
+        <span class="instagram-badge">НОВИНИ</span>
+        <h2 class="instagram-title">Instagram</h2>
+        <p class="instagram-subtitle">Підписуйтесь у соцмережах, щоб дізнаватися про знижки та акції</p>
+        <a href="#" class="instagram-tag">@3legant_official</a>
+      </div>
+      
+      <div class="instagram-grid">
+        <div class="instagram-item"><img src="assets/images/insta1.jpg" alt="Фото Instagram"></div>
+        <div class="instagram-item"><img src="assets/images/insta2.jpg" alt="Фото Instagram"></div>
+        <div class="instagram-item"><img src="assets/images/insta3.jpg" alt="Фото Instagram"></div>
+        <div class="instagram-item"><img src="assets/images/insta4.jpg" alt="Фото Instagram"></div>
+      </div>
+    </div>
+
+    <div class="features-container">
+      <div class="features-grid">
+        
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M28 38V14M28 38H32M28 38H18M28 14C28 9.58172 24.4183 6 20 6H12C7.58172 6 4 9.58172 4 14V30C4 33.7304 6.55333 36.8645 10.0077 37.7499M28 14H34.4182C35.4344 14 36.4126 14.3868 37.154 15.0819L42.7358 20.3148C43.5424 21.071 44 22.1273 44 23.2329V34C44 36.2091 42.2091 38 40 38M40 38C40 40.2091 38.2091 42 36 42C33.7909 42 32 40.2091 32 38M40 38C40 35.7909 38.2091 34 36 34C33.7909 34 32 35.7909 32 38M18 38C18 40.2091 16.2091 42 14 42C11.7909 42 10 40.2091 10 38C10 37.916 10.0026 37.8326 10.0077 37.7499M18 38C18 35.7909 16.2091 34 14 34C11.8748 34 10.1368 35.6573 10.0077 37.7499" stroke="#141718" stroke-width="2.5"/>
+              <path d="M20 16H16" stroke="#141718" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 24H12" stroke="#141718" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Безкоштовна доставка</h3>
+          <p class="feature-text">Для замовлень від $200</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="8" width="40" height="32" rx="4" stroke="#141718" stroke-width="2.5"/>
+              <circle cx="4" cy="4" r="4" transform="matrix(1 0 0 -1 20 28)" stroke="#141718" stroke-width="2.5"/>
+              <circle cx="2" cy="2" r="2" transform="matrix(1 0 0 -1 34 26)" fill="#141718"/>
+              <circle cx="2" cy="2" r="2" transform="matrix(1 0 0 -1 10 26)" fill="#141718"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Повернення коштів</h3>
+          <p class="feature-text">30 днів гарантії</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 16H16M32 16C36.4183 16 40 19.5817 40 24V36C40 40.4183 36.4183 44 32 44H16C11.5817 44 8 40.4183 8 36V24C8 19.5817 11.5817 16 16 16M32 16V12C32 7.58172 28.4183 4 24 4C19.5817 4 16 7.58172 16 12V16M24 32V28" stroke="#141718" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Безпечні платежі</h3>
+          <p class="feature-text">Захищено сервісом Stripe</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M42 38V34.7081C42 33.0725 41.0042 31.6017 39.4856 30.9942L35.4173 29.3669C33.4857 28.5943 31.2844 29.4312 30.354 31.292L30 32C30 32 25 31 21 27C17 23 16 18 16 18L16.708 17.646C18.5688 16.7156 19.4057 14.5143 18.6331 12.5827L17.0058 8.51444C16.3983 6.99581 14.9275 6 13.2919 6H10C7.79086 6 6 7.79086 6 10C6 27.6731 20.3269 42 38 42C40.2091 42 42 40.2091 42 38Z" stroke="#141718" stroke-width="2.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Підтримка 24/7</h3>
+          <p class="feature-text">Консультації за телефоном та e-mail</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer" class="main-footer">
+    <div class="footer-top-grid">
+      
+      <div class="footer-brand-col">
+        <a href="#" class="footer-logo">3elegant<span>.</span></a>
+        <p class="footer-address">
+          вул. Хай Чієу, 43111,<br>
+          Район 1, Хошимін<br>
+          В'єтнам
+        </p>
+        <p class="footer-phone">84-756-3237</p>
+        
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="4" stroke="#141718" stroke-width="1.5"/>
+              <circle cx="18" cy="6" r="1" fill="#141718"/>
+              <circle cx="12" cy="12" r="5" stroke="#141718" stroke-width="1.5"/>
+            </svg>
+          </a>
+          
+          <a href="#" aria-label="Facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 3H15C12.2386 3 10 5.23858 10 8V10H6V14H10V21H14V14H18V10H14V8C14 7.44772 14.4477 7 15 7H18V3Z" stroke="#141718" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          
+          <a href="#" aria-label="YouTube">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="3" width="20" height="18" rx="4" stroke="#141718" stroke-width="1.5"/>
+              <path d="M10.4472 8.72361L15.2111 11.1056C15.9482 11.4741 15.9482 12.5259 15.2111 12.8944L10.4472 15.2764C9.78231 15.6088 9 15.1253 9 14.382V9.61803C9 8.87465 9.78231 8.39116 10.4472 8.72361Z" stroke="#141718" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-menu-col">
+        <div class="footer-accordion-header">
+          <h3 class="footer-col-title">Сторінки</h3>
+          <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <ul class="footer-links-list">
+          <li><a href="#">Головна</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Товари</a></li>
+          <li><a href="#">Статті</a></li>
+          <li><a href="#">Контакти</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-menu-col">
+        <div class="footer-accordion-header">
+          <h3 class="footer-col-title">Інформація</h3>
+          <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <ul class="footer-links-list">
+          <li><a href="#">Правила доставки</a></li>
+          <li><a href="#">Повернення та відшкодування</a></li>
+          <li><a href="#">Підтримка</a></li>
+          <li><a href="#">Поширені запитання (FAQ)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter-col">
+        <h3 class="footer-col-title accent">Підписка на новини</h3>
+        <p class="newsletter-desc">Підпишіться на розсилку, щоб дізнаватися про вигідні пропозиції, новинки та знижки</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Введіть ваш email" required class="newsletter-input">
+          <button type="submit" class="newsletter-submit-btn" aria-label="Підписатися">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-payments">
+        <img src="assets/images/visa.jpg" alt="Visa">
+        <img src="assets/images/amex.jpg" alt="American Express">
+        <img src="assets/images/mastercard.jpg" alt="Mastercard">
+        <img src="assets/images/stripe.jpg" alt="Stripe">
+        <img src="assets/images/paypal.jpg" alt="PayPal">
+        <img src="assets/images/applepay.jpg" alt="Apple Pay">
+      </div>
+      
+      <div class="footer-legal">
+        <a href="#">Політика конфіденційності</a>
+        <a href="#">Умови використання</a>
+      </div>
+      
+      <p class="footer-copyright">© 2023 3elegant. Усі права захищено</p>
+    </div>
+  </footer>
+
+</body>
+</html>
