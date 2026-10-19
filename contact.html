@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти - 3legant</title>
+  <meta name="description" content="Зв'яжіться з магазином одягу для активного відпочинку 3legant.">
+  <script src="assets/js/script.js" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="header-container">
+      <button class="burger-menu" aria-label="Відкрити меню"><span></span><span></span><span></span></button>
+      <a href="index.html" class="logo">3legant.</a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Головна</a>
+        <a href="catalog.html" class="nav-link dropdown">Каталог</a>
+        <a href="product.html" class="nav-link dropdown">Товари</a>
+        <a href="contact.html" class="nav-link active">Контакти</a>
+      </nav>
+      <div class="header-icons">
+        <button class="icon-btn search-btn" aria-label="Пошук">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.25 17.25L20.75 20.75M19.75 10.25C19.75 5.00329 15.4967 0.75 10.25 0.75C5.00329 0.75 0.75 5.00329 0.75 10.25C0.75 15.4967 5.00329 19.75 10.25 19.75C15.4967 19.75 19.75 15.4967 19.75 10.25Z" stroke="#141718" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn profile-btn" aria-label="Профіль">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.3088 18.2988C16.3154 15.6418 13.7536 13.75 10.75 13.75C7.74638 13.75 5.1846 15.6418 4.19117 18.2988M4.19117 18.2988C5.94694 19.8256 8.24052 20.75 10.75 20.75C13.2595 20.75 15.5531 19.8256 17.3088 18.2988C19.4172 16.4654 20.75 13.7634 20.75 10.75C20.75 5.22715 16.2728 0.75 10.75 0.75C5.22715 0.75 0.75 5.22715 0.75 10.75C0.75 13.7634 2.08285 16.4654 4.19117 18.2988ZM13.75 7.75C13.75 9.40685 12.4069 10.75 10.75 10.75C9.09315 10.75 7.75 9.40685 7.75 7.75C7.75 6.09315 9.09315 4.75 10.75 4.75C12.4069 4.75 13.75 6.09315 13.75 7.75Z" stroke="#141718" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="cart-wrapper">
+          <a href="#" class="cart-link" aria-label="Кошик">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.6408 0.75H6.41784C4.46248 0.75 2.79372 2.16365 2.47226 4.0924L0.805597 14.0924C0.399243 16.5305 2.27942 18.75 4.75117 18.75H15.3075C17.7792 18.75 19.6594 16.5305 19.2531 14.0924L17.5864 4.0924C17.2649 2.16365 15.5962 0.75 13.6408 0.75Z" stroke="#141718" stroke-width="1.5" stroke-linejoin="round"/><path d="M7.25 5.5L7.25 6.5C7.25 8.15685 8.59315 9.5 10.25 9.5C11.9069 9.5 13.25 8.15685 13.25 6.5V5.5" stroke="#141718" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="cart-badge">2</div>
+        </div>
+      </div>
+    </div> 
+  </header>
+
+  
+  <main>
+    <section class="page-header">
+      <div class="breadcrumbs">
+        <a href="index.html">Головна</a> Контакти
+      </div>
+      <h1 class="section-title">Зв'яжіться з нами</h1>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-info-grid">
+        <div class="contact-card">
+          <h3>Наша адреса</h3>
+          <p class="feature-text">вул. Хай Чієу, 43111,<br> Район 1, Хошимін <br> В'єтнам</p>
+        </div>
+        <div class="contact-card">
+          <h3>Телефон</h3>
+          <p class="feature-text">+38 (050) 123-45-67<br>Пн-Нд: 09:00 - 20:00</p>
+        </div>
+        <div class="contact-card">
+          <h3>Електронна пошта</h3>
+          <p class="feature-text">support@3legant-outdoor.com</p>
+        </div>
+      </div>
+
+      
+
+      <div class="contact-form-wrapper">
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Ваше ім'я</label>
+            <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Ваш Email</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Повідомлення</label>
+            <textarea id="message" name="message" placeholder="Напишіть ваше запитання тут..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Надіслати повідомлення</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="main-footer">
+    <div class="footer-bottom">
+      <div class="footer-legal"><a href="#">Політика конфіденційності</a><a href="#">Умови використання</a></div>
+      <p class="footer-copyright">© 2023 3elegant. Усі права захищено</p>
+    </div>
+  </footer>
+
+</body>
+</html>
