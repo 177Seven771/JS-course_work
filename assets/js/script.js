@@ -233,3 +233,26 @@ if (catalogGrid && filterCheckboxes.length > 0) {
   });
   renderProducts(productsData);
 }
+
+const cartLink = document.querySelector('.cart-link');
+const cartModal = document.getElementById('cartModal');
+const closeCartBtn = document.getElementById('closeCart');
+
+if (cartLink && cartModal) {
+  cartLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    cartModal.classList.add('active');
+  });
+
+  if (closeCartBtn) {
+    closeCartBtn.addEventListener('click', () => {
+      cartModal.classList.remove('active');
+    });
+  }
+
+  cartModal.addEventListener('click', (e) => {
+    if (e.target === cartModal) {
+      cartModal.classList.remove('active');
+    }
+  });
+}
