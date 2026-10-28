@@ -1542,6 +1542,103 @@ body {
   padding-top: 4px;
 }
 
+.grid-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: var(--font-inter);
+  font-size: 0.875rem;
+  color: var(--dark-grey);
+  padding: 20px 0;
+}
+
+.grid-error-message {
+  grid-column: 1 / -1;
+  font-family: var(--font-inter);
+  color: #d9534f;
+  padding: 16px;
+  border: 1px solid #d9534f;
+  border-radius: 8px;
+  background-color: #fdf7f7;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-card {
+  animation: fadeInUp 0.35s ease forwards;
+}
+
+button, a, select, input {
+  transition: all 0.2s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cart-modal-overlay.active .cart-modal {
+  animation: modalFadeIn 0.25s ease forwards;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-form .btn-primary {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 24px;
+  background-color: var(--dark-grey);
+  color: var(--white);
+  font-family: var(--font-inter, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #35393b;
+  transform: translateY(-2px);
+}
+
+.contact-form .btn-primary:active {
+  transform: translateY(0);
+}
+
+.contact-form .btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
 
 @media (min-width: 481px) {
   
@@ -2075,9 +2172,36 @@ body {
   .cart-modal-footer {
     padding-top: 8px;
   }
-}
+
+.grid-message,
+  .grid-error-message {
+    font-size: 1rem;
+  }
 
 @keyframes modalFadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .product-card:hover .product-img {
+    transform: scale(1.05);
+  }
+
+  .product-img {
+    transition: transform 0.4s ease;
+  }
+
+  .reveal {
+    transform: translateY(25px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+}
+

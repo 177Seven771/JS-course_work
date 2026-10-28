@@ -13,7 +13,7 @@
   <div class="cart-modal">
     <div class="cart-modal-header">
       <h2>Ваш кошик</h2>
-      <button class="cart-close-btn" id="closeCart" aria-label="Закрити">&times;</button>
+      <button class="cart-close-btn" id="closeCart" aria-label="Закрити"></button>
     </div>
     <div class="cart-modal-body">
       <p>Товарів у кошику: <strong>1</strong></p>
@@ -67,13 +67,16 @@
 
     <section class="catalog-content">
       <div class="catalog-layout">
-        <aside class="filters-sidebar">
+       <aside class="filters-sidebar">
           <div class="filter-group">
             <h3 class="filter-title">Категорії</h3>
-            <label><input type="checkbox" class="category-filter" value="jackets"> Куртки та пуховики</label><br>
-            <label><input type="checkbox" class="category-filter" value="fleece"> Светри та кофти</label><br>
-            <label><input type="checkbox" class="category-filter" value="thermal"> Термобілизна</label><br>
-            <label><input type="checkbox" class="category-filter" value="pants"> Штани</label>
+            <select id="categorySelect" class="category-dropdown">
+              <option value="">Усі категорії</option>
+              <option value="jackets">Куртки та пуховики</option>
+              <option value="fleece">Светри та кофти</option>
+              <option value="thermal">Термобілизна</option>
+              <option value="pants">Штани</option>
+            </select>
           </div>
         </aside>
         <div class="catalog-grid" id="catalogGrid">

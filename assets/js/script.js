@@ -72,166 +72,163 @@ if (brandsSlider && prevArrow && nextArrow) {
   });
 }
 
-const productsData = [
-  {
-    id: 1,
-    name: "Трекінгова куртка Gore-Tex Pro",
-    price: "310 $",
-    image: "assets/images/november-outfits.jpg",
-    category: "jackets",
-    badge: "ТОП",
-    badgeClass: "badge-hot",
-    link: "product.html"
-  },
-  {
-    id: 2,
-    name: "Флісова кофта Polar 200",
-    price: "120 $",
-    image: "assets/images/flis-polar200.jpg",
-    category: "fleece",
-    badge: "НОВИНКА",
-    badgeClass: "badge-new",
-    link: "product.html"
-  },
-  {
-    id: 3,
-    name: "Туристичні штани Softshell",
-    price: "150 $",
-    image: "assets/images/softshell.jpg",
-    category: "pants",
-    badge: "",
-    badgeClass: "",
-    link: "product.html"
-  },
-  {
-    id: 4,
-    name: "Штормова куртка Alpine Windproof",
-    price: "290 $",
-    image: "assets/images/alphine.jpg",
-    category: "jackets",
-    badge: "",
-    badgeClass: "",
-    link: "product.html"
-  },
-  {
-    id: 5,
-    name: "Комплект термобілизни Merino",
-    price: "50$",
-    image: "assets/images/termo-merino.jpg",
-    category: "thermal",
-    badge: "",
-    badgeClass: "",
-    link: "product.html"
-  },
-  {
-    id: 6,
-    name: "Утеплені штани Winter Hike",
-    price: "140$",
-    image: "assets/images/winter-hike.jpg",
-    category: "pants",
-    badge: "ТОП",
-    badgeClass: "badge-hot",
-    link: "product.html"
-  }
-];
-
+let productsData = []; 
 const catalogGrid = document.getElementById('catalogGrid');
-const filterCheckboxes = document.querySelectorAll('.category-filter');
+const bestsellerGrid = document.getElementById('bestsellerGrid');
+const productBestsellerGrid = document.getElementById('productBestsellerGrid');
+const categorySelect = document.getElementById('categorySelect');
 
+function createProductCard(product) {
+  const article = document.createElement('article');
+  article.className = 'product-card';
 
-function renderProducts(products) {
-  if (!catalogGrid) return; 
+  const link = document.createElement('a');
+  link.href = product.link || 'product.html';
+  link.className = 'product-card-link';
 
-  catalogGrid.innerHTML = ''; 
+  const imageBox = document.createElement('div');
+  imageBox.className = 'product-image-box';
+
+  if (product.badge) {
+    const badge = document.createElement('span');
+    badge.className = product.badgeClass || 'badge-hot';
+    badge.textContent = product.badge;
+    imageBox.appendChild(badge);
+  }
+
+  if (product.saleBadge) {
+    const saleBadge = document.createElement('span');
+    saleBadge.className = 'badge-sale';
+    saleBadge.textContent = product.saleBadge;
+    imageBox.appendChild(saleBadge);
+  }
+
+  const img = document.createElement('img');
+  img.src = product.image;
+  img.alt = product.name;
+  img.className = 'product-img';
+  imageBox.appendChild(img);
+
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'add-to-cart-btn';
+  btn.textContent = 'У кошик';
+  imageBox.appendChild(btn);
+
+  const infoBox = document.createElement('div');
+  infoBox.className = 'product-info';
+
+  const stars = document.createElement('div');
+  stars.className = 'stars';
+  stars.textContent = '★★★★★';
+  infoBox.appendChild(stars);
+
+  const title = document.createElement('h3');
+  title.className = 'product-name';
+  title.textContent = product.name;
+  infoBox.appendChild(title);
+
+  const priceWrapper = document.createElement('div');
+  priceWrapper.className = 'price-wrapper';
+
+  const price = document.createElement('span');
+  price.className = 'product-price';
+  price.textContent = product.price;
+  priceWrapper.appendChild(price);
+
+  if (product.oldPrice) {
+    const oldPrice = document.createElement('span');
+    oldPrice.className = 'product-old-price';
+    oldPrice.textContent = product.oldPrice;
+    priceWrapper.appendChild(oldPrice);
+  }
+
+  infoBox.appendChild(priceWrapper);
+  link.appendChild(imageBox);
+  link.appendChild(infoBox);
+  article.appendChild(link);
+
+  return article;
+}
+
+function renderProductsContainer(container, products) {
+  if (!container) return;
+
+  container.innerHTML = '';
 
   if (products.length === 0) {
-    const emptyMessage = document.createElement('p');
-    emptyMessage.style.gridColumn = '1 / -1';
-    emptyMessage.style.fontFamily = 'var(--font-inter)';
-    emptyMessage.style.color = 'var(--dark-grey)';
-    emptyMessage.textContent = 'На жаль, товарів у цій категорії не знайдено.';
-    catalogGrid.appendChild(emptyMessage);
+    const emptyMsg = document.createElement('p');
+    emptyMsg.className = 'grid-message';
+    emptyMsg.textContent = 'На жаль, товарів у цій категорії не знайдено.';
+    container.appendChild(emptyMsg);
     return;
   }
 
   products.forEach(product => {
-    const article = document.createElement('article');
-    article.className = 'product-card';
-
-    const link = document.createElement('a');
-    link.href = product.link;
-    link.className = 'product-card-link';
-
-    const imageBox = document.createElement('div');
-    imageBox.className = 'product-image-box';
-
-    if (product.badge) {
-      const badge = document.createElement('span');
-      badge.className = product.badgeClass;
-      badge.textContent = product.badge;
-      imageBox.appendChild(badge);
-    }
-
-    const img = document.createElement('img');
-    img.src = product.image;
-    img.alt = product.name;
-    img.className = 'product-img';
-    imageBox.appendChild(img);
-
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'add-to-cart-btn';
-    btn.textContent = 'Детальніше';
-    imageBox.appendChild(btn);
-
-    const infoBox = document.createElement('div');
-    infoBox.className = 'product-info';
-
-    const stars = document.createElement('div');
-    stars.className = 'stars';
-    stars.textContent = '★★★★★';
-    infoBox.appendChild(stars);
-
-    const title = document.createElement('h3');
-    title.className = 'product-name';
-    title.textContent = product.name;
-    infoBox.appendChild(title);
-
-    const price = document.createElement('span');
-    price.className = 'product-price';
-    price.textContent = product.price;
-    infoBox.appendChild(price);
-
-    link.appendChild(imageBox);
-    link.appendChild(infoBox);
-    article.appendChild(link);
-
-    catalogGrid.appendChild(article);
+    container.appendChild(createProductCard(product));
   });
 }
 
-function handleFilterChange() {
+async function loadProductsData() {
+  if (catalogGrid) catalogGrid.innerHTML = '<p class="grid-message">Завантаження каталогу...</p>';
+  if (bestsellerGrid) bestsellerGrid.innerHTML = '<p class="grid-message">Завантаження хітів продажу...</p>';
+  if (productBestsellerGrid) productBestsellerGrid.innerHTML = '<p class="grid-message">Завантаження хітів продажу...</p>';
 
-  const selectedCategories = Array.from(filterCheckboxes)
-    .filter(checkbox => checkbox.checked)
-    .map(checkbox => checkbox.value);
+  try {
+    const response = await fetch('assets/data/products.json');
 
-  if (selectedCategories.length === 0) {
-    renderProducts(productsData);
-  } else {
-    const filteredProducts = productsData.filter(product => 
-      selectedCategories.includes(product.category)
-    );
-    renderProducts(filteredProducts);
+    if (!response.ok) {
+      throw new Error(`Помилка HTTP: ${response.status}`);
+    }
+
+    productsData = await response.json();
+
+    if (catalogGrid) {
+      renderProductsContainer(catalogGrid, productsData);
+    }
+
+    if (bestsellerGrid) {
+      renderProductsContainer(bestsellerGrid, productsData);
+    }
+
+    if (productBestsellerGrid) {
+      renderProductsContainer(productBestsellerGrid, productsData);
+    }
+
+  } catch (error) {
+    console.error('Помилка при завантаженні товарів:', error);
+
+    const errorHTML = `
+      <div class="grid-error-message">
+        <h3>Не вдалося завантажити товари</h3>
+        <p>Помилка отримання даних (${error.message}). Перевірте шлях до JSON-файлу або підключення.</p>
+      </div>
+    `;
+
+    if (catalogGrid) catalogGrid.innerHTML = errorHTML;
+    if (bestsellerGrid) bestsellerGrid.innerHTML = errorHTML;
+    if (productBestsellerGrid) productBestsellerGrid.innerHTML = errorHTML;
   }
 }
 
+function handleFilterChange() {
+  const selectedCategory = categorySelect.value;
 
-if (catalogGrid && filterCheckboxes.length > 0) {
-  filterCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', handleFilterChange);
-  });
-  renderProducts(productsData);
+  if (!selectedCategory) {
+    renderProductsContainer(catalogGrid, productsData);
+  } else {
+    const filteredProducts = productsData.filter(product => 
+      product.category === selectedCategory
+    );
+    renderProductsContainer(catalogGrid, filteredProducts);
+  }
+}
+
+if (catalogGrid || bestsellerGrid || productBestsellerGrid) {
+  if (categorySelect) {
+    categorySelect.addEventListener('change', handleFilterChange);
+  }
+  loadProductsData();
 }
 
 const cartLink = document.querySelector('.cart-link');
@@ -256,3 +253,147 @@ if (cartLink && cartModal) {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elementsToReveal = document.querySelectorAll('.bestseller-section, .catalog-content, .features-container, .collection-card, .promo-banner-container, .contact-section');
+
+  elementsToReveal.forEach(el => {
+    el.classList.add('reveal');
+  });
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById('contactForm');
+  
+  if (contactForm) {
+    const userName = document.getElementById('userName');
+    const userEmail = document.getElementById('userEmail');
+    const userMessage = document.getElementById('userMessage');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+    const successMessage = document.getElementById('formSuccessMessage');
+    const serverErrorMessage = document.getElementById('formServerErrorMessage');
+
+    function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      let isValid = true;
+
+      if (successMessage) successMessage.style.display = 'none';
+      if (serverErrorMessage) serverErrorMessage.style.display = 'none';
+
+      if (userName.value.trim() === '') {
+        userName.classList.add('error');
+        userName.classList.remove('success');
+        nameError.textContent = 'Будь ласка, введіть ваше ім\'я.';
+        nameError.classList.add('active');
+        isValid = false;
+      } else if (userName.value.trim().length < 2) {
+        userName.classList.add('error');
+        nameError.textContent = 'Ім\'я повинно містити щонайменше 2 символи.';
+        nameError.classList.add('active');
+        isValid = false;
+      } else {
+        userName.classList.remove('error');
+        userName.classList.add('success');
+        nameError.classList.remove('active');
+      }
+
+      if (userEmail.value.trim() === '') {
+        userEmail.classList.add('error');
+        userEmail.classList.remove('success');
+        emailError.textContent = 'Будь ласка, введіть ваш email.';
+        emailError.classList.add('active');
+        isValid = false;
+      } else if (!isValidEmail(userEmail.value.trim())) {
+        userEmail.classList.add('error');
+        userEmail.classList.remove('success');
+        emailError.textContent = 'Введіть коректний email (наприклад, example@mail.com).';
+        emailError.classList.add('active');
+        isValid = false;
+      } else {
+        userEmail.classList.remove('error');
+        userEmail.classList.add('success');
+        emailError.classList.remove('active');
+      }
+
+      if (userMessage.value.trim() === '') {
+        userMessage.classList.add('error');
+        userMessage.classList.remove('success');
+        messageError.textContent = 'Будь ласка, напишіть повідомлення.';
+        messageError.classList.add('active');
+        isValid = false;
+      } else if (userMessage.value.trim().length < 10) {
+        userMessage.classList.add('error');
+        messageError.textContent = 'Повідомлення має містити щонайменше 10 символів.';
+        messageError.classList.add('active');
+        isValid = false;
+      } else {
+        userMessage.classList.remove('error');
+        userMessage.classList.add('success');
+        messageError.classList.remove('active');
+      }
+
+      if (isValid) {
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Надсилання...';
+
+        const formData = new FormData(contactForm);
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            successMessage.style.display = 'block';
+            contactForm.reset();
+            setTimeout(() => {
+              userName.classList.remove('success');
+              userEmail.classList.remove('success');
+              userMessage.classList.remove('success');
+            }, 3000);
+          } else {
+            if (serverErrorMessage) serverErrorMessage.style.display = 'block';
+          }
+        } catch (error) {
+          console.error('Помилка надсилання форми:', error);
+          if (serverErrorMessage) serverErrorMessage.style.display = 'block';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
+      }
+    });
+  }
+});
